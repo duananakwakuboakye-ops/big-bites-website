@@ -1,0 +1,313 @@
+/* Reset & Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Segoe UI', 'Montserrat', sans-serif;
+    background: linear-gradient(135deg, #fffbe6 0%, #ffeccd 100%);
+    color: #24272a;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+a {
+    color: #ff8800;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+a:hover {
+    color: #14b900;
+}
+
+/* Header, Logo, Nav */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 28px 6vw 12px 6vw;
+    background: rgba(255, 255, 255, 0.94);
+    box-shadow: 0 4px 26px 0 rgba(248, 198, 50, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+.logo-placeholder {
+    font-size: 2.2rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    color: #ff9400;
+    display: flex;
+    align-items: center;
+}
+nav a {
+    margin-left: 1.8rem;
+    font-weight: 500;
+    font-size: 1.12rem;
+    padding: 6px 12px;
+    border-radius: 20px;
+    transition: background 0.2s, color 0.2s;
+}
+nav a:hover, nav a.active {
+    background: #ffa300;
+    color: #fff;
+}
+
+/* Section Layout */
+.section {
+    padding: 70px 7vw 70px 7vw;
+    position: relative;
+    min-height: 60vh;
+}
+.section h2 {
+    font-size: 2.1rem;
+    color: #ff9400;
+    margin-bottom: 28px;
+    letter-spacing: 0.02rem;
+    text-shadow: 0 2px 12px #ffedbc8c;
+}
+
+.hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 66px;
+    margin-bottom: 44px;
+}
+.hero-content h1 {
+    font-size: 3.4rem;
+    color: #e8500e;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 18px;
+    text-align: center;
+}
+.hero-content p {
+    font-size: 1.33rem;
+    max-width: 510px;
+    text-align: center;
+    color: #383c42;
+    margin-top: 10px;
+}
+
+/* Menu Section */
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(234px, 1fr));
+    gap: 30px;
+    margin-top: 36px;
+}
+.menu-item {
+    background: #fff7e3bb;
+    border-radius: 19px;
+    box-shadow: 0 2px 20px 0 #ffbe5232;
+    padding: 18px 15px 26px 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: box-shadow 0.16s, transform 0.2s;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+.menu-item img {
+    width: 88px;
+    height: 88px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 15px;
+    border: 3px dotted #ff8d001c;
+    filter: drop-shadow(0px 7px 21px #ffbe527e);
+    transition: transform 0.35s cubic-bezier(.68,.21,.45,1.46);
+}
+.menu-item:hover img {
+    transform: rotate(10deg) scale(1.18);
+}
+
+/* NEW — Location Section */
+.location-container {
+    display: flex;
+    gap: 35px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.map-preview {
+    width: 55%;
+}
+
+.location-info {
+    width: 40%;
+    background: #fff5dcde;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 2px 18px #f7cd54a2;
+}
+
+.map-btn {
+    display: inline-block;
+    background: #e8500e;
+    color: #fff;
+    padding: 12px 22px;
+    margin-top: 15px;
+    border-radius: 10px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background 0.2s;
+}
+
+.map-btn:hover {
+    background: #ce4603;
+}
+
+/* Contact Form */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    margin: 0 auto 18px auto;
+    gap: 18px;
+    background: #fff5dcde;
+    padding: 22px 15px;
+    border-radius: 14px;
+    box-shadow: 0 2px 18px 0 #f7cd54a2;
+}
+.contact-form label {
+    font-size: 1rem;
+    color: #c58813;
+}
+.contact-form input,
+.contact-form textarea {
+    padding: 9px 9px;
+    margin-top: 7px;
+    font-size: 0.98rem;
+    border: 1.5px solid #ffb95993;
+    border-radius: 7px;
+    background: #fffdf5;
+    resize: none;
+    transition: border 0.2s;
+}
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline: none;
+    border: 1.5px solid #ff9400;
+}
+.contact-form button {
+    background: #e8500e;
+    color: #fffbe8;
+    border: none;
+    font-size: 1.08rem;
+    border-radius: 7px;
+    padding: 10px 0;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 10px;
+    box-shadow: 0 2px 8px #ffb44c42;
+    transition: background 0.2s;
+}
+.contact-form button:hover {
+    background: #ce4603;
+}
+.contact-info {
+    text-align: center;
+    margin-top: 14px;
+    color: #876700;
+}
+
+footer {
+    background: #1b1a19;
+    color: #fff6cf;
+    text-align: center;
+    font-size: 1rem;
+    padding: 21px 0 19px 0;
+    letter-spacing: 1px;
+}
+
+/* Animated Section Reveal */
+.reveal {
+    opacity: 0;
+    transform: translateY(36px) scale(0.98);
+    transition: opacity 0.7s cubic-bezier(.77,0,.18,1), transform 0.7s cubic-bezier(.77,0,.18,1);
+}
+.reveal.visible {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+}
+
+/* ALL ANIMATION DELAYS = EXACTLY 1 SECOND */
+.delay1,
+.delay2,
+.delay3,
+.delay4,
+.delay5,
+.delay6,
+.delay7,
+.delay8,
+.delay9,
+.delay10 {
+    transition-delay: 1s;
+}
+
+/* Responsive */
+@media (max-width: 850px) {
+    .section {
+        padding: 45px 2vw 45px 2vw;
+    }
+    nav a {
+        margin-left: .6rem;
+        font-size: 1rem;
+    }
+    .hero-content h1 {
+        font-size: 2.4rem;
+    }
+    .menu-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    /* Location responsive */
+    .location-container {
+        flex-direction: column;
+        text-align: center;
+    }
+    .map-preview,
+    .location-info {
+        width: 100%;
+    }
+}
+
+@media (max-width: 600px) {
+    .menu-grid {
+        grid-template-columns: 1fr;
+    }
+    header {
+        flex-direction: column;
+        gap: 12px;
+        padding: 14px 3vw;
+    }
+    .hero-content h1 {
+        font-size: 1.5rem;
+    }
+}
+
+/* Futuristic Cursor */
+.custom-cursor {
+    width: 38px;
+    height: 38px;
+    border: 2px solid #ff7900cc;
+    border-radius: 50%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    z-index: 9999;
+    background: radial-gradient(circle at 50% 50%, #ffe8b36a 40%, transparent 70%);
+    transition: width 0.1s, height 0.1s, border 0.17s, background 0.18s;
+    mix-blend-mode: difference;
+}
+.custom-cursor.active {
+    width: 55px;
+    height: 55px;
+    border: 2.5px solid #1be6adcc;
+    background: radial-gradient(circle at 50% 50%, #ffe8b3c3 45%, transparent 70%);
+}
